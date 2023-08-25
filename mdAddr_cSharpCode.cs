@@ -278,12 +278,8 @@ namespace MelissaData {
 			public static extern IntPtr mdAddrGetEWSFlag(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetCMRA", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdAddrGetCMRA(IntPtr i);
-			[DllImport("mdAddr", EntryPoint = "mdAddrGetDsfNoStats", CallingConvention = CallingConvention.Cdecl)]
-			public static extern IntPtr mdAddrGetDsfNoStats(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetDsfVacant", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdAddrGetDsfVacant(IntPtr i);
-			[DllImport("mdAddr", EntryPoint = "mdAddrGetDsfDNA", CallingConvention = CallingConvention.Cdecl)]
-			public static extern IntPtr mdAddrGetDsfDNA(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetCountryCode", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdAddrGetCountryCode(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetZipType", CallingConvention = CallingConvention.Cdecl)]
@@ -308,10 +304,18 @@ namespace MelissaData {
 			public static extern IntPtr mdAddrGetMelissaAddressKey(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetMelissaAddressKeyBase", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdAddrGetMelissaAddressKeyBase(IntPtr i);
+			[DllImport("mdAddr", EntryPoint = "mdAddrGetOutputParameter", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdAddrGetOutputParameter(IntPtr i, IntPtr p1);
+			[DllImport("mdAddr", EntryPoint = "mdAddrSetInputParameter", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdAddrSetInputParameter(IntPtr i, IntPtr p1, IntPtr p2);
 			[DllImport("mdAddr", EntryPoint = "mdAddrFindSuggestion", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdAddrFindSuggestion(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrFindSuggestionNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdAddrFindSuggestionNext(IntPtr i);
+			[DllImport("mdAddr", EntryPoint = "mdAddrGetDsfNoStats", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdAddrGetDsfNoStats(IntPtr i);
+			[DllImport("mdAddr", EntryPoint = "mdAddrGetDsfDNA", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdAddrGetDsfDNA(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetPS3553_B6_TotalRecords", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdAddrGetPS3553_B6_TotalRecords(IntPtr i);
 			[DllImport("mdAddr", EntryPoint = "mdAddrGetPS3553_C1a_ZIP4Coded", CallingConvention = CallingConvention.Cdecl)]
@@ -914,16 +918,8 @@ namespace MelissaData {
 			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCMRA(i));
 		}
 
-		public string GetDsfNoStats() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfNoStats(i));
-		}
-
 		public string GetDsfVacant() {
 			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfVacant(i));
-		}
-
-		public string GetDsfDNA() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfDNA(i));
 		}
 
 		public string GetCountryCode() {
@@ -974,12 +970,31 @@ namespace MelissaData {
 			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetMelissaAddressKeyBase(i));
 		}
 
+		public string GetOutputParameter(string p1) {
+			Utf8String u_p1 = new Utf8String(p1);
+			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetOutputParameter(i, u_p1.GetUtf8Ptr()));
+		}
+
+		public int SetInputParameter(string p1, string p2) {
+			Utf8String u_p1 = new Utf8String(p1);
+			Utf8String u_p2 = new Utf8String(p2);
+			return mdAddrUnmanaged.mdAddrSetInputParameter(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr());
+		}
+
 		public bool FindSuggestion() {
 			return (mdAddrUnmanaged.mdAddrFindSuggestion(i) != 0);
 		}
 
 		public bool FindSuggestionNext() {
 			return (mdAddrUnmanaged.mdAddrFindSuggestionNext(i) != 0);
+		}
+
+		public string GetDsfNoStats() {
+			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfNoStats(i));
+		}
+
+		public string GetDsfDNA() {
+			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfDNA(i));
 		}
 
 		public int GetPS3553_B6_TotalRecords() {
