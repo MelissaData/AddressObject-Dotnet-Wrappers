@@ -430,10 +430,10 @@ namespace MelissaData {
 		}
 
 		public ProgramStatus Initialize(string p1, string p2, string p3) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			Utf8String u_p3 = new Utf8String(p3);
-			return (ProgramStatus)mdAddrUnmanaged.mdAddrInitialize(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), u_p3.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			EncodedString u_p3 = new EncodedString(p3);
+			return (ProgramStatus)mdAddrUnmanaged.mdAddrInitialize(i, u_p1.GetPtr(), u_p2.GetPtr(), u_p3.GetPtr());
 		}
 
 		public ProgramStatus InitializeDataFiles() {
@@ -441,80 +441,80 @@ namespace MelissaData {
 		}
 
 		public string GetInitializeErrorString() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetInitializeErrorString(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetInitializeErrorString(i));
 		}
 
 		public bool SetLicenseString(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdAddrUnmanaged.mdAddrSetLicenseString(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdAddrUnmanaged.mdAddrSetLicenseString(i, u_p1.GetPtr()) != 0);
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetBuildNumber(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetBuildNumber(i));
 		}
 
 		public string GetDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDatabaseDate(i));
 		}
 
 		public string GetExpirationDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetExpirationDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetExpirationDate(i));
 		}
 
 		public string GetLicenseExpirationDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetLicenseExpirationDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetLicenseExpirationDate(i));
 		}
 
 		public string GetCanadianDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCanadianDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCanadianDatabaseDate(i));
 		}
 
 		public string GetCanadianExpirationDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCanadianExpirationDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCanadianExpirationDate(i));
 		}
 
 		public void SetPathToUSFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToUSFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToUSFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToCanadaFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToCanadaFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToCanadaFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToDPVDataFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToDPVDataFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToDPVDataFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToLACSLinkDataFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToLACSLinkDataFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToLACSLinkDataFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToSuiteLinkDataFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToSuiteLinkDataFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToSuiteLinkDataFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToSuiteFinderDataFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToSuiteFinderDataFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToSuiteFinderDataFiles(i, u_p1.GetPtr());
 		}
 
 		public void SetPathToRBDIFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToRBDIFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToRBDIFiles(i, u_p1.GetPtr());
 		}
 
 		public string GetRBDIDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetRBDIDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetRBDIDatabaseDate(i));
 		}
 
 		public void SetPathToAddrKeyDataFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPathToAddrKeyDataFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPathToAddrKeyDataFiles(i, u_p1.GetPtr());
 		}
 
 		public void ClearProperties() {
@@ -538,78 +538,78 @@ namespace MelissaData {
 		}
 
 		public string GetStatusCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetStatusCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetStatusCode(i));
 		}
 
 		public string GetErrorCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetErrorCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetErrorCode(i));
 		}
 
 		public string GetErrorString() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetErrorString(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetErrorString(i));
 		}
 
 		public string GetResults() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetResults(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetResults(i));
 		}
 
 		public string GetResultCodeDescription(string resultCode, ResultCdDescOpt opt) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)opt));
+			EncodedString u_resultCode = new EncodedString(resultCode);
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetResultCodeDescription(i, u_resultCode.GetPtr(), (int)opt));
 		}
 
 		public string GetResultCodeDescription(string resultCode) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)ResultCdDescOpt.ResultCodeDescriptionLong));
+			EncodedString u_resultCode = new EncodedString(resultCode);
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetResultCodeDescription(i, u_resultCode.GetPtr(), (int)ResultCdDescOpt.ResultCodeDescriptionLong));
 		}
 
 		public void SetPS3553_B1_ProcessorName(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_B1_ProcessorName(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_B1_ProcessorName(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_B4_ListName(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_B4_ListName(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_B4_ListName(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_Name(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_Name(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_Name(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_Company(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_Company(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_Company(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_Address(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_Address(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_Address(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_City(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_City(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_City(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_State(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_State(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_State(i, u_p1.GetPtr());
 		}
 
 		public void SetPS3553_D3_ZIP(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPS3553_D3_ZIP(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPS3553_D3_ZIP(i, u_p1.GetPtr());
 		}
 
 		public string GetFormPS3553() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetFormPS3553(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetFormPS3553(i));
 		}
 
 		public bool SaveFormPS3553(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdAddrUnmanaged.mdAddrSaveFormPS3553(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdAddrUnmanaged.mdAddrSaveFormPS3553(i, u_p1.GetPtr()) != 0);
 		}
 
 		public void ResetFormPS3553() {
@@ -633,12 +633,12 @@ namespace MelissaData {
 		}
 
 		public string GetFormSOA() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetFormSOA(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetFormSOA(i));
 		}
 
 		public void SaveFormSOA(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSaveFormSOA(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSaveFormSOA(i, u_p1.GetPtr());
 		}
 
 		public void ResetFormSOA() {
@@ -646,22 +646,22 @@ namespace MelissaData {
 		}
 
 		public void SetSOACustomerInfo(string customerName, string customerAddress) {
-			Utf8String u_customerName = new Utf8String(customerName);
-			Utf8String u_customerAddress = new Utf8String(customerAddress);
-			mdAddrUnmanaged.mdAddrSetSOACustomerInfo(i, u_customerName.GetUtf8Ptr(), u_customerAddress.GetUtf8Ptr());
+			EncodedString u_customerName = new EncodedString(customerName);
+			EncodedString u_customerAddress = new EncodedString(customerAddress);
+			mdAddrUnmanaged.mdAddrSetSOACustomerInfo(i, u_customerName.GetPtr(), u_customerAddress.GetPtr());
 		}
 
 		public void SetSOACPCNumber(string CPCNumber) {
-			Utf8String u_CPCNumber = new Utf8String(CPCNumber);
-			mdAddrUnmanaged.mdAddrSetSOACPCNumber(i, u_CPCNumber.GetUtf8Ptr());
+			EncodedString u_CPCNumber = new EncodedString(CPCNumber);
+			mdAddrUnmanaged.mdAddrSetSOACPCNumber(i, u_CPCNumber.GetPtr());
 		}
 
 		public string GetSOACustomerInfo() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSOACustomerInfo(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSOACustomerInfo(i));
 		}
 
 		public string GetSOACPCNumber() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSOACPCNumber(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSOACPCNumber(i));
 		}
 
 		public int GetSOATotalRecords() {
@@ -673,125 +673,125 @@ namespace MelissaData {
 		}
 
 		public string GetSOAAAExpiryDate() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSOAAAExpiryDate(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSOAAAExpiryDate(i));
 		}
 
 		public string GetSOASoftwareInfo() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSOASoftwareInfo(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSOASoftwareInfo(i));
 		}
 
 		public string GetSOAErrorString() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSOAErrorString(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSOAErrorString(i));
 		}
 
 		public void SetCompany(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetCompany(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetCompany(i, u_p1.GetPtr());
 		}
 
 		public void SetLastName(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetLastName(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetLastName(i, u_p1.GetPtr());
 		}
 
 		public void SetAddress(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetAddress(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetAddress(i, u_p1.GetPtr());
 		}
 
 		public void SetAddress2(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetAddress2(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetAddress2(i, u_p1.GetPtr());
 		}
 
 		public void SetLastLine(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetLastLine(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetLastLine(i, u_p1.GetPtr());
 		}
 
 		public void SetSuite(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetSuite(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetSuite(i, u_p1.GetPtr());
 		}
 
 		public void SetCity(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetCity(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetCity(i, u_p1.GetPtr());
 		}
 
 		public void SetState(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetState(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetState(i, u_p1.GetPtr());
 		}
 
 		public void SetZip(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetZip(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetZip(i, u_p1.GetPtr());
 		}
 
 		public void SetPlus4(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetPlus4(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetPlus4(i, u_p1.GetPtr());
 		}
 
 		public void SetUrbanization(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetUrbanization(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetUrbanization(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedAddressRange(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedAddressRange(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedAddressRange(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedPreDirection(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedPreDirection(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedPreDirection(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedStreetName(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedStreetName(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedStreetName(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedSuffix(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedSuffix(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedSuffix(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedPostDirection(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedPostDirection(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedPostDirection(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedSuiteName(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedSuiteName(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedSuiteName(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedSuiteRange(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedSuiteRange(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedSuiteRange(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedRouteService(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedRouteService(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedRouteService(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedLockBox(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedLockBox(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedLockBox(i, u_p1.GetPtr());
 		}
 
 		public void SetParsedDeliveryInstallation(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetParsedDeliveryInstallation(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetParsedDeliveryInstallation(i, u_p1.GetPtr());
 		}
 
 		public void SetCountryCode(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdAddrUnmanaged.mdAddrSetCountryCode(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdAddrUnmanaged.mdAddrSetCountryCode(i, u_p1.GetPtr());
 		}
 
 		public bool VerifyAddress() {
@@ -799,186 +799,186 @@ namespace MelissaData {
 		}
 
 		public string GetCompany() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCompany(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCompany(i));
 		}
 
 		public string GetLastName() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetLastName(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetLastName(i));
 		}
 
 		public string GetAddress() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetAddress(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetAddress(i));
 		}
 
 		public string GetAddress2() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetAddress2(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetAddress2(i));
 		}
 
 		public string GetSuite() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSuite(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSuite(i));
 		}
 
 		public string GetCity() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCity(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCity(i));
 		}
 
 		public string GetCityAbbreviation() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCityAbbreviation(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCityAbbreviation(i));
 		}
 
 		public string GetState() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetState(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetState(i));
 		}
 
 		public string GetZip() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetZip(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetZip(i));
 		}
 
 		public string GetPlus4() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetPlus4(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetPlus4(i));
 		}
 
 		public string GetCarrierRoute() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCarrierRoute(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCarrierRoute(i));
 		}
 
 		public string GetDeliveryPointCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDeliveryPointCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDeliveryPointCode(i));
 		}
 
 		public string GetDeliveryPointCheckDigit() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDeliveryPointCheckDigit(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDeliveryPointCheckDigit(i));
 		}
 
 		public string GetCountyFips() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCountyFips(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCountyFips(i));
 		}
 
 		public string GetCountyName() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCountyName(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCountyName(i));
 		}
 
 		public string GetAddressTypeCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetAddressTypeCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetAddressTypeCode(i));
 		}
 
 		public string GetAddressTypeString() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetAddressTypeString(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetAddressTypeString(i));
 		}
 
 		public string GetUrbanization() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetUrbanization(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetUrbanization(i));
 		}
 
 		public string GetCongressionalDistrict() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCongressionalDistrict(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCongressionalDistrict(i));
 		}
 
 		public string GetLACS() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetLACS(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetLACS(i));
 		}
 
 		public string GetLACSLinkIndicator() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetLACSLinkIndicator(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetLACSLinkIndicator(i));
 		}
 
 		public string GetPrivateMailbox() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetPrivateMailbox(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetPrivateMailbox(i));
 		}
 
 		public string GetTimeZoneCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetTimeZoneCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetTimeZoneCode(i));
 		}
 
 		public string GetTimeZone() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetTimeZone(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetTimeZone(i));
 		}
 
 		public string GetMsa() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetMsa(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetMsa(i));
 		}
 
 		public string GetPmsa() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetPmsa(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetPmsa(i));
 		}
 
 		public string GetDefaultFlagIndicator() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDefaultFlagIndicator(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDefaultFlagIndicator(i));
 		}
 
 		public string GetSuiteStatus() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSuiteStatus(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSuiteStatus(i));
 		}
 
 		public string GetEWSFlag() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetEWSFlag(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetEWSFlag(i));
 		}
 
 		public string GetCMRA() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCMRA(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCMRA(i));
 		}
 
 		public string GetDsfVacant() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfVacant(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDsfVacant(i));
 		}
 
 		public string GetCountryCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetCountryCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetCountryCode(i));
 		}
 
 		public string GetZipType() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetZipType(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetZipType(i));
 		}
 
 		public string GetFalseTable() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetFalseTable(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetFalseTable(i));
 		}
 
 		public string GetDPVFootnotes() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDPVFootnotes(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDPVFootnotes(i));
 		}
 
 		public string GetLACSLinkReturnCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetLACSLinkReturnCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetLACSLinkReturnCode(i));
 		}
 
 		public string GetSuiteLinkReturnCode() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetSuiteLinkReturnCode(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetSuiteLinkReturnCode(i));
 		}
 
 		public string GetRBDI() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetRBDI(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetRBDI(i));
 		}
 
 		public string GetELotNumber() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetELotNumber(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetELotNumber(i));
 		}
 
 		public string GetELotOrder() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetELotOrder(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetELotOrder(i));
 		}
 
 		public string GetAddressKey() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetAddressKey(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetAddressKey(i));
 		}
 
 		public string GetMelissaAddressKey() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetMelissaAddressKey(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetMelissaAddressKey(i));
 		}
 
 		public string GetMelissaAddressKeyBase() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetMelissaAddressKeyBase(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetMelissaAddressKeyBase(i));
 		}
 
 		public string GetOutputParameter(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetOutputParameter(i, u_p1.GetUtf8Ptr()));
+			EncodedString u_p1 = new EncodedString(p1);
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetOutputParameter(i, u_p1.GetPtr()));
 		}
 
 		public int SetInputParameter(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return mdAddrUnmanaged.mdAddrSetInputParameter(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return mdAddrUnmanaged.mdAddrSetInputParameter(i, u_p1.GetPtr(), u_p2.GetPtr());
 		}
 
 		public bool FindSuggestion() {
@@ -990,11 +990,11 @@ namespace MelissaData {
 		}
 
 		public string GetDsfNoStats() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfNoStats(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDsfNoStats(i));
 		}
 
 		public string GetDsfDNA() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetDsfDNA(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetDsfDNA(i));
 		}
 
 		public int GetPS3553_B6_TotalRecords() {
@@ -1130,97 +1130,98 @@ namespace MelissaData {
 		}
 
 		public string GetParsedAddressRange() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedAddressRange(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedAddressRange(i));
 		}
 
 		public string GetParsedPreDirection() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedPreDirection(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedPreDirection(i));
 		}
 
 		public string GetParsedStreetName() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedStreetName(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedStreetName(i));
 		}
 
 		public string GetParsedSuffix() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedSuffix(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedSuffix(i));
 		}
 
 		public string GetParsedPostDirection() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedPostDirection(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedPostDirection(i));
 		}
 
 		public string GetParsedSuiteName() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedSuiteName(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedSuiteName(i));
 		}
 
 		public string GetParsedSuiteRange() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedSuiteRange(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedSuiteRange(i));
 		}
 
 		public string GetParsedPrivateMailboxName() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedPrivateMailboxName(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedPrivateMailboxName(i));
 		}
 
 		public string GetParsedPrivateMailboxNumber() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedPrivateMailboxNumber(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedPrivateMailboxNumber(i));
 		}
 
 		public string GetParsedGarbage() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedGarbage(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedGarbage(i));
 		}
 
 		public string GetParsedRouteService() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedRouteService(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedRouteService(i));
 		}
 
 		public string GetParsedLockBox() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedLockBox(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedLockBox(i));
 		}
 
 		public string GetParsedDeliveryInstallation() {
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetParsedDeliveryInstallation(i));
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetParsedDeliveryInstallation(i));
 		}
 
 		public void SetReserved(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			mdAddrUnmanaged.mdAddrSetReserved(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			mdAddrUnmanaged.mdAddrSetReserved(i, u_p1.GetPtr(), u_p2.GetPtr());
 		}
 
 		public string GetReserved(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdAddrUnmanaged.mdAddrGetReserved(i, u_p1.GetUtf8Ptr()));
+			EncodedString u_p1 = new EncodedString(p1);
+			return EncodedString.GetEncodedString(mdAddrUnmanaged.mdAddrGetReserved(i, u_p1.GetPtr()));
 		}
 
-		private class Utf8String : IDisposable {
-			private IntPtr utf8String = IntPtr.Zero;
+		private class EncodedString : IDisposable {
+			private IntPtr encodedString = IntPtr.Zero;
+			private static Encoding encoding = Encoding.GetEncoding("ISO-8859-1");
 
-			public Utf8String(string str) {
+			public EncodedString(string str) {
 				if (str == null)
 					str = "";
-				byte[] buffer = Encoding.UTF8.GetBytes(str);
+				byte[] buffer = encoding.GetBytes(str);
 				Array.Resize(ref buffer, buffer.Length + 1);
 				buffer[buffer.Length - 1] = 0;
-				utf8String = Marshal.AllocHGlobal(buffer.Length);
-				Marshal.Copy(buffer, 0, utf8String, buffer.Length);
+				encodedString = Marshal.AllocHGlobal(buffer.Length);
+				Marshal.Copy(buffer, 0, encodedString, buffer.Length);
 			}
 
-			~Utf8String() {
+			~EncodedString() {
 				Dispose();
 			}
 
 			public virtual void Dispose() {
 				lock (this) {
-					Marshal.FreeHGlobal(utf8String);
+					Marshal.FreeHGlobal(encodedString);
 					GC.SuppressFinalize(this);
 				}
 			}
 
-			public IntPtr GetUtf8Ptr() {
-				return utf8String;
+			public IntPtr GetPtr() {
+				return encodedString;
 			}
 
-			public static string GetUnicodeString(IntPtr ptr) {
+			public static string GetEncodedString(IntPtr ptr) {
 				if (ptr == IntPtr.Zero)
 					return "";
 				int len = 0;
@@ -1230,7 +1231,7 @@ namespace MelissaData {
 					return "";
 				byte[] buffer = new byte[len];
 				Marshal.Copy(ptr, buffer, 0, len);
-				return Encoding.UTF8.GetString(buffer);
+				return encoding.GetString(buffer);
 			}
 		}
 	}
@@ -1357,22 +1358,22 @@ namespace MelissaData {
 		}
 
 		public ProgramStatus Initialize(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (ProgramStatus)mdParseUnmanaged.mdParseInitialize(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			return (ProgramStatus)mdParseUnmanaged.mdParseInitialize(i, u_p1.GetPtr());
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetBuildNumber(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetBuildNumber(i));
 		}
 
 		public void Parse(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdParseUnmanaged.mdParseParse(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdParseUnmanaged.mdParseParse(i, u_p1.GetPtr());
 		}
 
 		public void ParseCanadian(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdParseUnmanaged.mdParseParseCanadian(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdParseUnmanaged.mdParseParseCanadian(i, u_p1.GetPtr());
 		}
 
 		public bool ParseNext() {
@@ -1380,111 +1381,112 @@ namespace MelissaData {
 		}
 
 		public void LastLineParse(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdParseUnmanaged.mdParseLastLineParse(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdParseUnmanaged.mdParseLastLineParse(i, u_p1.GetPtr());
 		}
 
 		public string GetZip() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetZip(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetZip(i));
 		}
 
 		public string GetPlus4() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetPlus4(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetPlus4(i));
 		}
 
 		public string GetCity() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetCity(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetCity(i));
 		}
 
 		public string GetState() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetState(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetState(i));
 		}
 
 		public string GetStreetName() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetStreetName(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetStreetName(i));
 		}
 
 		public string GetRange() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetRange(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetRange(i));
 		}
 
 		public string GetPreDirection() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetPreDirection(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetPreDirection(i));
 		}
 
 		public string GetPostDirection() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetPostDirection(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetPostDirection(i));
 		}
 
 		public string GetSuffix() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetSuffix(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetSuffix(i));
 		}
 
 		public string GetSuiteName() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetSuiteName(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetSuiteName(i));
 		}
 
 		public string GetSuiteNumber() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetSuiteNumber(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetSuiteNumber(i));
 		}
 
 		public string GetPrivateMailboxNumber() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetPrivateMailboxNumber(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetPrivateMailboxNumber(i));
 		}
 
 		public string GetPrivateMailboxName() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetPrivateMailboxName(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetPrivateMailboxName(i));
 		}
 
 		public string GetGarbage() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetGarbage(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetGarbage(i));
 		}
 
 		public string GetRouteService() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetRouteService(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetRouteService(i));
 		}
 
 		public string GetLockBox() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetLockBox(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetLockBox(i));
 		}
 
 		public string GetDeliveryInstallation() {
-			return Utf8String.GetUnicodeString(mdParseUnmanaged.mdParseGetDeliveryInstallation(i));
+			return EncodedString.GetEncodedString(mdParseUnmanaged.mdParseGetDeliveryInstallation(i));
 		}
 
 		public int ParseRule() {
 			return mdParseUnmanaged.mdParseParseRule(i);
 		}
 
-		private class Utf8String : IDisposable {
-			private IntPtr utf8String = IntPtr.Zero;
+		private class EncodedString : IDisposable {
+			private IntPtr encodedString = IntPtr.Zero;
+			private static Encoding encoding = Encoding.GetEncoding("ISO-8859-1");
 
-			public Utf8String(string str) {
+			public EncodedString(string str) {
 				if (str == null)
 					str = "";
-				byte[] buffer = Encoding.UTF8.GetBytes(str);
+				byte[] buffer = encoding.GetBytes(str);
 				Array.Resize(ref buffer, buffer.Length + 1);
 				buffer[buffer.Length - 1] = 0;
-				utf8String = Marshal.AllocHGlobal(buffer.Length);
-				Marshal.Copy(buffer, 0, utf8String, buffer.Length);
+				encodedString = Marshal.AllocHGlobal(buffer.Length);
+				Marshal.Copy(buffer, 0, encodedString, buffer.Length);
 			}
 
-			~Utf8String() {
+			~EncodedString() {
 				Dispose();
 			}
 
 			public virtual void Dispose() {
 				lock (this) {
-					Marshal.FreeHGlobal(utf8String);
+					Marshal.FreeHGlobal(encodedString);
 					GC.SuppressFinalize(this);
 				}
 			}
 
-			public IntPtr GetUtf8Ptr() {
-				return utf8String;
+			public IntPtr GetPtr() {
+				return encodedString;
 			}
 
-			public static string GetUnicodeString(IntPtr ptr) {
+			public static string GetEncodedString(IntPtr ptr) {
 				if (ptr == IntPtr.Zero)
 					return "";
 				int len = 0;
@@ -1494,7 +1496,7 @@ namespace MelissaData {
 					return "";
 				byte[] buffer = new byte[len];
 				Marshal.Copy(ptr, buffer, 0, len);
-				return Encoding.UTF8.GetString(buffer);
+				return encoding.GetString(buffer);
 			}
 		}
 	}
@@ -1647,37 +1649,37 @@ namespace MelissaData {
 		}
 
 		public ProgramStatus Initialize(string p1, string p2, string p3) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			Utf8String u_p3 = new Utf8String(p3);
-			return (ProgramStatus)mdStreetUnmanaged.mdStreetInitialize(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), u_p3.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			EncodedString u_p3 = new EncodedString(p3);
+			return (ProgramStatus)mdStreetUnmanaged.mdStreetInitialize(i, u_p1.GetPtr(), u_p2.GetPtr(), u_p3.GetPtr());
 		}
 
 		public string GetInitializeErrorString() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetInitializeErrorString(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetInitializeErrorString(i));
 		}
 
 		public string GetDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetDatabaseDate(i));
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetBuildNumber(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetBuildNumber(i));
 		}
 
 		public bool SetLicenseString(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdStreetUnmanaged.mdStreetSetLicenseString(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdStreetUnmanaged.mdStreetSetLicenseString(i, u_p1.GetPtr()) != 0);
 		}
 
 		public string GetLicenseExpirationDate() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetLicenseExpirationDate(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetLicenseExpirationDate(i));
 		}
 
 		public bool FindStreet(string p1, string p2, bool p3) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return (mdStreetUnmanaged.mdStreetFindStreet(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), (p3 ? 1 : 0)) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return (mdStreetUnmanaged.mdStreetFindStreet(i, u_p1.GetPtr(), u_p2.GetPtr(), (p3 ? 1 : 0)) != 0);
 		}
 
 		public bool FindStreetNext() {
@@ -1685,24 +1687,24 @@ namespace MelissaData {
 		}
 
 		public bool IsAddressInRange(string p1, string p2, string p3) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			Utf8String u_p3 = new Utf8String(p3);
-			return (mdStreetUnmanaged.mdStreetIsAddressInRange(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), u_p3.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			EncodedString u_p3 = new EncodedString(p3);
+			return (mdStreetUnmanaged.mdStreetIsAddressInRange(i, u_p1.GetPtr(), u_p2.GetPtr(), u_p3.GetPtr()) != 0);
 		}
 
 		public bool IsAddressInRange2(string p1, string p2, string p3, string p4) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			Utf8String u_p3 = new Utf8String(p3);
-			Utf8String u_p4 = new Utf8String(p4);
-			return (mdStreetUnmanaged.mdStreetIsAddressInRange2(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), u_p3.GetUtf8Ptr(), u_p4.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			EncodedString u_p3 = new EncodedString(p3);
+			EncodedString u_p4 = new EncodedString(p4);
+			return (mdStreetUnmanaged.mdStreetIsAddressInRange2(i, u_p1.GetPtr(), u_p2.GetPtr(), u_p3.GetPtr(), u_p4.GetPtr()) != 0);
 		}
 
 		public string GetAutoCompletion(string p1, string p2, AutoCompletionMode p3, bool p4) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetAutoCompletion(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), (int)p3, (p4 ? 1 : 0)));
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetAutoCompletion(i, u_p1.GetPtr(), u_p2.GetPtr(), (int)p3, (p4 ? 1 : 0)));
 		}
 
 		public void ResetAutoCompletion() {
@@ -1710,134 +1712,135 @@ namespace MelissaData {
 		}
 
 		public string GetBaseAlternateIndicator() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetBaseAlternateIndicator(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetBaseAlternateIndicator(i));
 		}
 
 		public string GetLACSIndicator() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetLACSIndicator(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetLACSIndicator(i));
 		}
 
 		public string GetUrbanizationCode() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetUrbanizationCode(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetUrbanizationCode(i));
 		}
 
 		public string GetUrbanizationName() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetUrbanizationName(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetUrbanizationName(i));
 		}
 
 		public string GetLastLineNumber() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetLastLineNumber(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetLastLineNumber(i));
 		}
 
 		public string GetAddressType() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetAddressType(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetAddressType(i));
 		}
 
 		public string GetCongressionalDistrict() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetCongressionalDistrict(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetCongressionalDistrict(i));
 		}
 
 		public string GetCountyFips() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetCountyFips(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetCountyFips(i));
 		}
 
 		public string GetCompany() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetCompany(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetCompany(i));
 		}
 
 		public string GetCarrierRoute() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetCarrierRoute(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetCarrierRoute(i));
 		}
 
 		public string GetZip() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetZip(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetZip(i));
 		}
 
 		public string GetDeliveryInstallation() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetDeliveryInstallation(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetDeliveryInstallation(i));
 		}
 
 		public string GetPlus4High() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPlus4High(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPlus4High(i));
 		}
 
 		public string GetPlus4Low() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPlus4Low(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPlus4Low(i));
 		}
 
 		public string GetSuiteRangeOddEven() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetSuiteRangeOddEven(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetSuiteRangeOddEven(i));
 		}
 
 		public string GetSuiteRangeHigh() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetSuiteRangeHigh(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetSuiteRangeHigh(i));
 		}
 
 		public string GetSuiteRangeLow() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetSuiteRangeLow(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetSuiteRangeLow(i));
 		}
 
 		public string GetSuiteName() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetSuiteName(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetSuiteName(i));
 		}
 
 		public string GetPostDirection() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPostDirection(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPostDirection(i));
 		}
 
 		public string GetSuffix() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetSuffix(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetSuffix(i));
 		}
 
 		public string GetStreetName() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetStreetName(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetStreetName(i));
 		}
 
 		public string GetPreDirection() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPreDirection(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPreDirection(i));
 		}
 
 		public string GetPrimaryRangeOddEven() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPrimaryRangeOddEven(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPrimaryRangeOddEven(i));
 		}
 
 		public string GetPrimaryRangeHigh() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPrimaryRangeHigh(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPrimaryRangeHigh(i));
 		}
 
 		public string GetPrimaryRangeLow() {
-			return Utf8String.GetUnicodeString(mdStreetUnmanaged.mdStreetGetPrimaryRangeLow(i));
+			return EncodedString.GetEncodedString(mdStreetUnmanaged.mdStreetGetPrimaryRangeLow(i));
 		}
 
-		private class Utf8String : IDisposable {
-			private IntPtr utf8String = IntPtr.Zero;
+		private class EncodedString : IDisposable {
+			private IntPtr encodedString = IntPtr.Zero;
+			private static Encoding encoding = Encoding.GetEncoding("ISO-8859-1");
 
-			public Utf8String(string str) {
+			public EncodedString(string str) {
 				if (str == null)
 					str = "";
-				byte[] buffer = Encoding.UTF8.GetBytes(str);
+				byte[] buffer = encoding.GetBytes(str);
 				Array.Resize(ref buffer, buffer.Length + 1);
 				buffer[buffer.Length - 1] = 0;
-				utf8String = Marshal.AllocHGlobal(buffer.Length);
-				Marshal.Copy(buffer, 0, utf8String, buffer.Length);
+				encodedString = Marshal.AllocHGlobal(buffer.Length);
+				Marshal.Copy(buffer, 0, encodedString, buffer.Length);
 			}
 
-			~Utf8String() {
+			~EncodedString() {
 				Dispose();
 			}
 
 			public virtual void Dispose() {
 				lock (this) {
-					Marshal.FreeHGlobal(utf8String);
+					Marshal.FreeHGlobal(encodedString);
 					GC.SuppressFinalize(this);
 				}
 			}
 
-			public IntPtr GetUtf8Ptr() {
-				return utf8String;
+			public IntPtr GetPtr() {
+				return encodedString;
 			}
 
-			public static string GetUnicodeString(IntPtr ptr) {
+			public static string GetEncodedString(IntPtr ptr) {
 				if (ptr == IntPtr.Zero)
 					return "";
 				int len = 0;
@@ -1847,7 +1850,7 @@ namespace MelissaData {
 					return "";
 				byte[] buffer = new byte[len];
 				Marshal.Copy(ptr, buffer, 0, len);
-				return Encoding.UTF8.GetString(buffer);
+				return encoding.GetString(buffer);
 			}
 		}
 	}
@@ -1998,36 +2001,36 @@ namespace MelissaData {
 		}
 
 		public ProgramStatus Initialize(string p1, string p2, string p3) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			Utf8String u_p3 = new Utf8String(p3);
-			return (ProgramStatus)mdZipUnmanaged.mdZipInitialize(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr(), u_p3.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			EncodedString u_p3 = new EncodedString(p3);
+			return (ProgramStatus)mdZipUnmanaged.mdZipInitialize(i, u_p1.GetPtr(), u_p2.GetPtr(), u_p3.GetPtr());
 		}
 
 		public string GetInitializeErrorString() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetInitializeErrorString(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetInitializeErrorString(i));
 		}
 
 		public string GetDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetDatabaseDate(i));
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetBuildNumber(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetBuildNumber(i));
 		}
 
 		public bool SetLicenseString(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdZipUnmanaged.mdZipSetLicenseString(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdZipUnmanaged.mdZipSetLicenseString(i, u_p1.GetPtr()) != 0);
 		}
 
 		public string GetLicenseExpirationDate() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetLicenseExpirationDate(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetLicenseExpirationDate(i));
 		}
 
 		public bool FindZip(string p1, bool p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdZipUnmanaged.mdZipFindZip(i, u_p1.GetUtf8Ptr(), (p2 ? 1 : 0)) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdZipUnmanaged.mdZipFindZip(i, u_p1.GetPtr(), (p2 ? 1 : 0)) != 0);
 		}
 
 		public bool FindZipNext() {
@@ -2035,9 +2038,9 @@ namespace MelissaData {
 		}
 
 		public bool FindZipInCity(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return (mdZipUnmanaged.mdZipFindZipInCity(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return (mdZipUnmanaged.mdZipFindZipInCity(i, u_p1.GetPtr(), u_p2.GetPtr()) != 0);
 		}
 
 		public bool FindZipInCityNext() {
@@ -2045,9 +2048,9 @@ namespace MelissaData {
 		}
 
 		public bool FindCityInState(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return (mdZipUnmanaged.mdZipFindCityInState(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return (mdZipUnmanaged.mdZipFindCityInState(i, u_p1.GetPtr(), u_p2.GetPtr()) != 0);
 		}
 
 		public bool FindCityInStateNext() {
@@ -2063,124 +2066,125 @@ namespace MelissaData {
 		}
 
 		public string GetCountyNameFromFips(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetCountyNameFromFips(i, u_p1.GetUtf8Ptr()));
+			EncodedString u_p1 = new EncodedString(p1);
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetCountyNameFromFips(i, u_p1.GetPtr()));
 		}
 
 		public int GetSCFArea(string p1, IntPtr p2, IntPtr p3, IntPtr p4, IntPtr p5) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return mdZipUnmanaged.mdZipGetSCFArea(i, u_p1.GetUtf8Ptr(), p2, p3, p4, p5);
+			EncodedString u_p1 = new EncodedString(p1);
+			return mdZipUnmanaged.mdZipGetSCFArea(i, u_p1.GetPtr(), p2, p3, p4, p5);
 		}
 
 		public string GetZip() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetZip(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetZip(i));
 		}
 
 		public string GetCity() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetCity(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetCity(i));
 		}
 
 		public string GetCityAbbreviation() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetCityAbbreviation(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetCityAbbreviation(i));
 		}
 
 		public string GetState() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetState(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetState(i));
 		}
 
 		public string GetZipType() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetZipType(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetZipType(i));
 		}
 
 		public string GetCountyName() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetCountyName(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetCountyName(i));
 		}
 
 		public string GetCountyFips() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetCountyFips(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetCountyFips(i));
 		}
 
 		public string GetAreaCode() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetAreaCode(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetAreaCode(i));
 		}
 
 		public string GetLongitude() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetLongitude(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetLongitude(i));
 		}
 
 		public string GetLatitude() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetLatitude(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetLatitude(i));
 		}
 
 		public string GetTimeZone() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetTimeZone(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetTimeZone(i));
 		}
 
 		public string GetTimeZoneCode() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetTimeZoneCode(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetTimeZoneCode(i));
 		}
 
 		public string GetMsa() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetMsa(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetMsa(i));
 		}
 
 		public string GetPmsa() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetPmsa(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetPmsa(i));
 		}
 
 		public string GetFacilityCode() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetFacilityCode(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetFacilityCode(i));
 		}
 
 		public string GetLastLineIndicator() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetLastLineIndicator(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetLastLineIndicator(i));
 		}
 
 		public string GetLastLineNumber() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetLastLineNumber(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetLastLineNumber(i));
 		}
 
 		public string GetPreferredLastLineNumber() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetPreferredLastLineNumber(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetPreferredLastLineNumber(i));
 		}
 
 		public string GetAutomation() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetAutomation(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetAutomation(i));
 		}
 
 		public string GetFinanceNumber() {
-			return Utf8String.GetUnicodeString(mdZipUnmanaged.mdZipGetFinanceNumber(i));
+			return EncodedString.GetEncodedString(mdZipUnmanaged.mdZipGetFinanceNumber(i));
 		}
 
-		private class Utf8String : IDisposable {
-			private IntPtr utf8String = IntPtr.Zero;
+		private class EncodedString : IDisposable {
+			private IntPtr encodedString = IntPtr.Zero;
+			private static Encoding encoding = Encoding.GetEncoding("ISO-8859-1");
 
-			public Utf8String(string str) {
+			public EncodedString(string str) {
 				if (str == null)
 					str = "";
-				byte[] buffer = Encoding.UTF8.GetBytes(str);
+				byte[] buffer = encoding.GetBytes(str);
 				Array.Resize(ref buffer, buffer.Length + 1);
 				buffer[buffer.Length - 1] = 0;
-				utf8String = Marshal.AllocHGlobal(buffer.Length);
-				Marshal.Copy(buffer, 0, utf8String, buffer.Length);
+				encodedString = Marshal.AllocHGlobal(buffer.Length);
+				Marshal.Copy(buffer, 0, encodedString, buffer.Length);
 			}
 
-			~Utf8String() {
+			~EncodedString() {
 				Dispose();
 			}
 
 			public virtual void Dispose() {
 				lock (this) {
-					Marshal.FreeHGlobal(utf8String);
+					Marshal.FreeHGlobal(encodedString);
 					GC.SuppressFinalize(this);
 				}
 			}
 
-			public IntPtr GetUtf8Ptr() {
-				return utf8String;
+			public IntPtr GetPtr() {
+				return encodedString;
 			}
 
-			public static string GetUnicodeString(IntPtr ptr) {
+			public static string GetEncodedString(IntPtr ptr) {
 				if (ptr == IntPtr.Zero)
 					return "";
 				int len = 0;
@@ -2190,7 +2194,7 @@ namespace MelissaData {
 					return "";
 				byte[] buffer = new byte[len];
 				Marshal.Copy(ptr, buffer, 0, len);
-				return Encoding.UTF8.GetString(buffer);
+				return encoding.GetString(buffer);
 			}
 		}
 	}
