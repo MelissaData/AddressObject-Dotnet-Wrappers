@@ -14,15 +14,15 @@ For further details, please visit: https://docs.melissa.com/on-premise-api/addre
 
 - Windows 10 64-bit .NET 7.0, Powershell 5.1
 - Linux 64-bit .NET 7.0, Ubuntu 20.04.05 LTS
-- Melissa Address Object for 2024-09
+- Melissa Address Object for 2024-10
 - Wrapper file(s) have not changed since 2023-12
 
 ## Getting Started
 
 ### Download this project
 ```
-$ git clone https://github.com/MelissaData/AddressObject-Dotnet-Wrappers
-$ cd AddressObject-Dotnet-Wrappers
+git clone https://github.com/MelissaData/AddressObject-Dotnet-Wrappers
+cd AddressObject-Dotnet-Wrappers
 ```
 
 ### Copy wrappers to your project folder
@@ -54,13 +54,13 @@ Parameters:
 - license (optional): a license key to run the powershell script
 
 ```
-$ .\BuildAddrNETdll.ps1
+.\BuildAddrNETdll.ps1
 ```
 
 or
 
 ```
-$ .\BuildAddrNETdll.ps1 -license "<your_license_key>"
+.\BuildAddrNETdll.ps1 -license "<your_license_key>"
 ```
 
 ## See also
