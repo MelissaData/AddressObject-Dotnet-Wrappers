@@ -14,7 +14,7 @@ For further details, please visit: https://docs.melissa.com/on-premise-api/addre
 
 - Windows 10 64-bit .NET 7.0, Powershell 5.1
 - Linux 64-bit .NET 7.0, Ubuntu 20.04.05 LTS
-- Melissa Address Object for 2024-12
+- Melissa Address Object for 2025-01
 - Wrapper file(s) have not changed since 2023-12
 
 ## Getting Started
