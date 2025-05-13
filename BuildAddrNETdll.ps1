@@ -18,7 +18,7 @@ class FileConfig {
 
 ######################### Config ###########################
 
-$RELEASE_VERSION = '2025.04'
+$RELEASE_VERSION = '2025.05'
 
 # Uses the location of the .ps1 file 
 $CurrentPath = $PSScriptRoot
