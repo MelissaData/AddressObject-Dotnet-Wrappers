@@ -6,23 +6,23 @@ This is the code for you to run Address Object in .NET.
 
 Please feel free to copy or embed this code to your own project. Happy coding!
 
-For latest Melissa Address Object release notes, please visit: https://releasenotes.melissa.com/on-premise-api/address-object/
+To view the latest Melissa Address Object release notes or to subscribe to product notifications, please visit: https://releasenotes.melissa.com/on-premise-api/address-object/
 
 For further details, please visit: https://docs.melissa.com/on-premise-api/address-object/address-object-quickstart.html
 
 ## Tested Environments
 
-- Windows 10 64-bit .NET 7.0, Powershell 5.1
+- Windows 11 64-bit .NET 7.0, Powershell 5.1
 - Linux 64-bit .NET 7.0, Ubuntu 20.04.05 LTS
-- Melissa Address Object for 2026-01
+- Melissa Address Object for 2026-02
 - Wrapper file(s) have not changed since 2023-12
 
 ## Getting Started
 
 ### Download this project
 ```
-git clone https://github.com/MelissaData/AddressObject-Dotnet-Wrappers
-cd AddressObject-Dotnet-Wrappers
+git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/net/melissaaddressobjectnetwrappers.git
+cd melissaaddressobjectnetwrappers
 ```
 
 ### Copy wrappers to your project folder
