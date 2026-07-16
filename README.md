@@ -21,8 +21,8 @@ For further details, please visit: https://docs.melissa.com/on-premise-api/addre
 
 ### Download this project
 ```
-git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/net/melissaaddressobjectnetwrappers.git
-cd melissaaddressobjectnetwrappers
+git clone https://github.com/MelissaData/AddressObject-Dotnet-Wrappers
+cd AddressObject-Dotnet-Wrappers
 ```
 
 ### Copy wrappers to your project folder
