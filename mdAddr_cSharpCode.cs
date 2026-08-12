@@ -16,10 +16,6 @@ namespace MelissaData {
 			ErrorDatabaseExpired = 5,
 			ErrorLicenseExpired = 6
 		}
-		public enum AccessType {
-			Local = 0,
-			Remote = 1
-		}
 		public enum DiacriticsMode {
 			Auto = 0,
 			On = 1,
@@ -38,20 +34,9 @@ namespace MelissaData {
 			ConvertAlias = 0,
 			PreserveAlias = 1
 		}
-		public enum AutoCompletionMode {
-			AutoCompleteSingleSuite = 0,
-			AutoCompleteRangedSuite = 1,
-			AutoCompletePlaceHolderSuite = 2,
-			AutoCompleteNoSuite = 3
-		}
 		public enum ResultCdDescOpt {
 			ResultCodeDescriptionLong = 0,
 			ResultCodeDescriptionShort = 1
-		}
-		public enum MailboxLookupMode {
-			MailboxNone = 0,
-			MailboxExpress = 1,
-			MailboxPremium = 2
 		}
 
 		[SuppressUnmanagedCodeSecurity]
@@ -1248,43 +1233,6 @@ namespace MelissaData {
 			ErrorDatabaseExpired = 5,
 			ErrorLicenseExpired = 6
 		}
-		public enum AccessType {
-			Local = 0,
-			Remote = 1
-		}
-		public enum DiacriticsMode {
-			Auto = 0,
-			On = 1,
-			Off = 2
-		}
-		public enum StandardizeMode {
-			ShortFormat = 0,
-			LongFormat = 1,
-			AutoFormat = 2
-		}
-		public enum SuiteParseMode {
-			ParseSuite = 0,
-			CombineSuite = 1
-		}
-		public enum AliasPreserveMode {
-			ConvertAlias = 0,
-			PreserveAlias = 1
-		}
-		public enum AutoCompletionMode {
-			AutoCompleteSingleSuite = 0,
-			AutoCompleteRangedSuite = 1,
-			AutoCompletePlaceHolderSuite = 2,
-			AutoCompleteNoSuite = 3
-		}
-		public enum ResultCdDescOpt {
-			ResultCodeDescriptionLong = 0,
-			ResultCodeDescriptionShort = 1
-		}
-		public enum MailboxLookupMode {
-			MailboxNone = 0,
-			MailboxExpress = 1,
-			MailboxPremium = 2
-		}
 
 		[SuppressUnmanagedCodeSecurity]
 		private class mdParseUnmanaged {
@@ -1513,42 +1461,11 @@ namespace MelissaData {
 			ErrorDatabaseExpired = 5,
 			ErrorLicenseExpired = 6
 		}
-		public enum AccessType {
-			Local = 0,
-			Remote = 1
-		}
-		public enum DiacriticsMode {
-			Auto = 0,
-			On = 1,
-			Off = 2
-		}
-		public enum StandardizeMode {
-			ShortFormat = 0,
-			LongFormat = 1,
-			AutoFormat = 2
-		}
-		public enum SuiteParseMode {
-			ParseSuite = 0,
-			CombineSuite = 1
-		}
-		public enum AliasPreserveMode {
-			ConvertAlias = 0,
-			PreserveAlias = 1
-		}
 		public enum AutoCompletionMode {
 			AutoCompleteSingleSuite = 0,
 			AutoCompleteRangedSuite = 1,
 			AutoCompletePlaceHolderSuite = 2,
 			AutoCompleteNoSuite = 3
-		}
-		public enum ResultCdDescOpt {
-			ResultCodeDescriptionLong = 0,
-			ResultCodeDescriptionShort = 1
-		}
-		public enum MailboxLookupMode {
-			MailboxNone = 0,
-			MailboxExpress = 1,
-			MailboxPremium = 2
 		}
 
 		[SuppressUnmanagedCodeSecurity]
@@ -1866,43 +1783,6 @@ namespace MelissaData {
 			ErrorFoundOldFile = 4,
 			ErrorDatabaseExpired = 5,
 			ErrorLicenseExpired = 6
-		}
-		public enum AccessType {
-			Local = 0,
-			Remote = 1
-		}
-		public enum DiacriticsMode {
-			Auto = 0,
-			On = 1,
-			Off = 2
-		}
-		public enum StandardizeMode {
-			ShortFormat = 0,
-			LongFormat = 1,
-			AutoFormat = 2
-		}
-		public enum SuiteParseMode {
-			ParseSuite = 0,
-			CombineSuite = 1
-		}
-		public enum AliasPreserveMode {
-			ConvertAlias = 0,
-			PreserveAlias = 1
-		}
-		public enum AutoCompletionMode {
-			AutoCompleteSingleSuite = 0,
-			AutoCompleteRangedSuite = 1,
-			AutoCompletePlaceHolderSuite = 2,
-			AutoCompleteNoSuite = 3
-		}
-		public enum ResultCdDescOpt {
-			ResultCodeDescriptionLong = 0,
-			ResultCodeDescriptionShort = 1
-		}
-		public enum MailboxLookupMode {
-			MailboxNone = 0,
-			MailboxExpress = 1,
-			MailboxPremium = 2
 		}
 
 		[SuppressUnmanagedCodeSecurity]
